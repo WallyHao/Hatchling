@@ -7,7 +7,6 @@ type CreatedFrontMatter = {
   author_name?: string;
   author_bio?: string;
   author_github?: string;
-  author_url?: string;
   author_email?: string;
 };
 
@@ -24,7 +23,6 @@ export default function DocItemRightSidebar(): ReactNode {
     author_name: authorName,
     author_bio: authorBio,
     author_github: authorGithub,
-    author_url: authorUrl,
     author_email: authorEmail,
   } = frontMatter as CreatedFrontMatter;
   const lastUpdatedAt = metadata.lastUpdatedAt;
@@ -38,7 +36,7 @@ export default function DocItemRightSidebar(): ReactNode {
           <div className="hatchling-author">
             <div className="hatchling-author__name">{authorName}</div>
             {authorBio && <div className="hatchling-author__bio">{authorBio}</div>}
-            {(authorGithub || authorUrl || authorEmail) && (
+            {(authorGithub || authorEmail) && (
               <div className="hatchling-author__links">
                 {authorGithub && (
                   <a
@@ -47,15 +45,6 @@ export default function DocItemRightSidebar(): ReactNode {
                     target="_blank"
                     rel="noopener noreferrer">
                     GitHub
-                  </a>
-                )}
-                {authorUrl && (
-                  <a
-                    className="hatchling-author__link"
-                    href={authorUrl}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    个人主页
                   </a>
                 )}
                 {authorEmail && (
