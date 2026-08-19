@@ -1,3 +1,5 @@
+@import url('https://fontsapi.zeoseven.com/442/main/result.css');
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -14,6 +16,8 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Maple Mono NF CN', ui-monospace, monospace;
+  --ifm-font-family-monospace: 'Maple Mono NF CN', ui-monospace, monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
