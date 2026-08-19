@@ -84,11 +84,6 @@ const config: Config = {
           position: 'left',
           label: '文档',
         },
-        {
-          href: 'https://github.com/WallyHao/Hatchling',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
