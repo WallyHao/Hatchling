@@ -90,7 +90,6 @@ input[type='search']:focus {
 
 .theme-doc-sidebar-container {
   border-right-color: #29332b;
-  background: linear-gradient(180deg, #1c3323 0%, #0a120d 55%, #090b0a 100%);
 }
 
 .menu__link,
