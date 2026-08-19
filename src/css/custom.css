@@ -96,7 +96,11 @@ input[type='search']:focus {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding-left: 0.5rem;
+  align-items: flex-end;
+}
+
+.hatchling-card {
+  width: min(100%, 16rem);
 }
 
 .hatchling-card {
