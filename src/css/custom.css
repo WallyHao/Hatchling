@@ -38,6 +38,7 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Maple Mono NF CN', ui-monospace, monospace;
   --ifm-font-family-monospace: 'Maple Mono NF CN', ui-monospace, monospace;
+  --search-local-hit-active-color: #e7ffb8;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
 }
 
@@ -101,6 +102,19 @@ code {
 .button--primary:hover {
   color: #10150d;
   filter: brightness(1.08);
+}
+
+/* Keep keyboard-selected search results readable against the dark theme. */
+.searchBar .dropdownMenu .cursor {
+  background-color: #1c3825;
+}
+
+.searchBar .dropdownMenu .cursor,
+.searchBar .dropdownMenu .cursor mark,
+.searchBar .dropdownMenu .cursor .hitTree,
+.searchBar .dropdownMenu .cursor .hitIcon,
+.searchBar .dropdownMenu .cursor .hitPath {
+  color: #e7ffb8 !important;
 }
 
 .token.comment,
