@@ -80,9 +80,9 @@ pre {
 }
 
 input[type='search']:focus {
-  outline: 2px solid var(--ifm-color-primary);
+  outline: 2px solid #1c3825;
   outline-offset: 0px;
-  border-color: var(--ifm-color-primary);
+  border-color: #1c3825;
 }
 
 .header-github-link::before {
@@ -140,7 +140,7 @@ input[type='search']:focus {
 .hatchling-author__info {
   font-size: 0.75rem;
   line-height: 1.7;
-  color: var(--ifm-color-content-secondary);
+  color: var(--ifm-color-primary);
   word-break: break-all;
 }
 
