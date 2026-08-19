@@ -70,6 +70,14 @@ pre {
   border-top: 1px solid #29332b;
 }
 
+.footer--dark {
+  --ifm-footer-background-color: #060807;
+  --ifm-footer-color: #718074;
+  --ifm-footer-link-color: #96a398;
+  --ifm-footer-link-hover-color: #b8ff3d;
+  --ifm-footer-title-color: #d5dfd6;
+}
+
 .theme-code-block,
 code {
   background: #0d120e;
