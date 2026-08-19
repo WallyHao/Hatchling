@@ -48,6 +48,7 @@
 .hatchling-right-col {
   flex: 0 0 var(--hatchling-sidebar-width) !important;
   max-width: var(--hatchling-sidebar-width) !important;
+  padding: 0 !important;
 }
 
 body {
@@ -103,8 +104,6 @@ input[type='search']:focus {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding-left: 0.5rem;
-  transform: translateX(1rem);
 }
 
 .hatchling-card {
