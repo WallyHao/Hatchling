@@ -82,10 +82,10 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: '文档',
+          href: 'https://github.com/WallyHao/Hatchling',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
@@ -96,7 +96,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: '文档',
+              label: 'Docs',
               to: '/docs/intro',
             },
           ],
