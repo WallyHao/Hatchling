@@ -57,6 +57,10 @@ pre {
   box-shadow: none;
 }
 
+.navbar__logo {
+  margin-right: 0.75rem;
+}
+
 .theme-doc-sidebar-container {
   border-right-color: #29332b;
 }
@@ -105,12 +109,12 @@ code {
 }
 
 /* The search plugin hashes its cursor class, so match its stable class fragments. */
-.searchBar .dropdownMenu [class*='suggestion_'][class*='cursor_'] {
-  background-color: #1c3825;
+html[data-theme='dark'] .searchBar .dropdownMenu [class*='suggestion_'][class*='cursor_'] {
+  background-color: #1c3825 !important;
 }
 
-.searchBar .dropdownMenu [class*='cursor_'],
-.searchBar .dropdownMenu [class*='cursor_'] * {
+html[data-theme='dark'] .searchBar .dropdownMenu [class*='cursor_'],
+html[data-theme='dark'] .searchBar .dropdownMenu [class*='cursor_'] * {
   color: #e7ffb8 !important;
 }
 
