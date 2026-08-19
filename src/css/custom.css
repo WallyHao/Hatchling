@@ -104,16 +104,13 @@ code {
   filter: brightness(1.08);
 }
 
-/* Keep keyboard-selected search results readable against the dark theme. */
-.searchBar .dropdownMenu .cursor {
+/* The search plugin hashes its cursor class, so match its stable class fragments. */
+.searchBar .dropdownMenu [class*='suggestion_'][class*='cursor_'] {
   background-color: #1c3825;
 }
 
-.searchBar .dropdownMenu .cursor,
-.searchBar .dropdownMenu .cursor mark,
-.searchBar .dropdownMenu .cursor .hitTree,
-.searchBar .dropdownMenu .cursor .hitIcon,
-.searchBar .dropdownMenu .cursor .hitPath {
+.searchBar .dropdownMenu [class*='cursor_'],
+.searchBar .dropdownMenu [class*='cursor_'] * {
   color: #e7ffb8 !important;
 }
 
