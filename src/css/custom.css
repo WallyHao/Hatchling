@@ -115,32 +115,6 @@ input[type='search']:focus {
   margin-bottom: 0.5rem;
 }
 
-.hatchling-card__row {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  font-size: 0.8rem;
-  line-height: 1.8;
-  color: var(--ifm-color-content);
-}
-
-.hatchling-card__row span:first-child {
-  color: var(--ifm-color-content-secondary);
-}
-
-.hatchling-card__link {
-  display: block;
-  font-size: 0.8rem;
-  line-height: 1.9;
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-
-.hatchling-card__link:hover {
-  color: var(--ifm-color-primary-lighter);
-  text-decoration: none;
-}
-
 .hatchling-author__name {
   font-size: 0.95rem;
   font-weight: 700;
@@ -155,20 +129,11 @@ input[type='search']:focus {
   margin-bottom: 0.5rem;
 }
 
-.hatchling-author__links {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.hatchling-author__link {
-  font-size: 0.8rem;
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-
-.hatchling-author__link:hover {
-  color: var(--ifm-color-primary-lighter);
-  text-decoration: none;
+.hatchling-author__info {
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--ifm-color-content-secondary);
+  word-break: break-all;
 }
 
 @media (max-width: 996px) {
