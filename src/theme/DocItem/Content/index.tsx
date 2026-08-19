@@ -11,10 +11,10 @@ type CreatedFrontMatter = {
 
 function formatCreatedDate(value: string | Date): string {
   if (value instanceof Date) {
-    return `${value.getFullYear()} 年 ${value.getMonth() + 1} 月 ${value.getDate()} 日`;
+    return `create: ${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`;
   }
   const [year, month, day] = value.split('-');
-  return `${year} 年 ${Number(month)} 月 ${Number(day)} 日`;
+  return `create: ${year}-${Number(month)}-${Number(day)}`;
 }
 
 export default function DocItemContent({children}: Props) {
@@ -27,7 +27,7 @@ export default function DocItemContent({children}: Props) {
       {syntheticTitle && (
         <header>
           <Heading as="h1">{frontMatter.title}</Heading>
-          {created && <div className="doc-created-at">创建时间：{formatCreatedDate(created)}</div>}
+          {created && <div className="doc-created-at">{formatCreatedDate(created)}</div>}
         </header>
       )}
       <MDXContent>{children}</MDXContent>

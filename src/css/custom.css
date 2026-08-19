@@ -59,7 +59,11 @@ pre {
 }
 
 .navbar__logo {
-  margin-right: 0.75rem;
+  margin-right: 1.25rem;
+}
+
+.navbar__logo img {
+  transform: translateY(-2px);
 }
 
 .doc-created-at {
