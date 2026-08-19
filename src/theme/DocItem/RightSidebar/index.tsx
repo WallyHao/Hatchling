@@ -8,6 +8,7 @@ type CreatedFrontMatter = {
   author_bio?: string;
   author_github?: string;
   author_url?: string;
+  author_email?: string;
 };
 
 function formatDate(value: string | Date): string {
@@ -24,6 +25,7 @@ export default function DocItemRightSidebar(): ReactNode {
     author_bio: authorBio,
     author_github: authorGithub,
     author_url: authorUrl,
+    author_email: authorEmail,
   } = frontMatter as CreatedFrontMatter;
   const lastUpdatedAt = metadata.lastUpdatedAt;
   const repoUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
@@ -36,7 +38,7 @@ export default function DocItemRightSidebar(): ReactNode {
           <div className="hatchling-author">
             <div className="hatchling-author__name">{authorName}</div>
             {authorBio && <div className="hatchling-author__bio">{authorBio}</div>}
-            {(authorGithub || authorUrl) && (
+            {(authorGithub || authorUrl || authorEmail) && (
               <div className="hatchling-author__links">
                 {authorGithub && (
                   <a
@@ -54,6 +56,11 @@ export default function DocItemRightSidebar(): ReactNode {
                     target="_blank"
                     rel="noopener noreferrer">
                     个人主页
+                  </a>
+                )}
+                {authorEmail && (
+                  <a className="hatchling-author__link" href={`mailto:${authorEmail}`}>
+                    邮箱
                   </a>
                 )}
               </div>
