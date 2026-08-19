@@ -6,34 +6,35 @@
  * work well for content-centric websites.
  */
 
-/* Darcula-inspired palette based on the default PyCharm dark theme. */
+/* Premium black base with a fluorescent green-to-yellow accent. */
 :root {
-  --ifm-color-primary: #589df6;
-  --ifm-color-primary-dark: #4a86d1;
-  --ifm-color-primary-darker: #3f73b5;
-  --ifm-color-primary-darkest: #315b8e;
-  --ifm-color-primary-light: #72adf7;
-  --ifm-color-primary-lighter: #8bbcf8;
-  --ifm-color-primary-lightest: #a4cafa;
-  --ifm-background-color: #2b2b2b;
-  --ifm-background-surface-color: #313335;
-  --ifm-color-content: #a9b7c6;
-  --ifm-color-content-secondary: #808080;
-  --ifm-heading-color: #e6e6e6;
-  --ifm-navbar-background-color: #2b2b2b;
-  --ifm-footer-background-color: #212121;
-  --ifm-toc-border-color: #515151;
-  --ifm-code-background: #313335;
-  --ifm-color-emphasis-100: #353535;
-  --ifm-color-emphasis-200: #3c3f41;
-  --ifm-color-emphasis-300: #515151;
-  --ifm-color-emphasis-400: #5c6162;
-  --ifm-color-emphasis-500: #6e7374;
-  --ifm-color-emphasis-600: #808080;
-  --ifm-color-emphasis-700: #9da0a2;
-  --ifm-color-emphasis-800: #b7b9ba;
-  --ifm-color-emphasis-900: #d0d0d0;
-  --ifm-color-emphasis-1000: #f0f0f0;
+  --ifm-color-primary: #b8ff3d;
+  --ifm-color-primary-dark: #9fe329;
+  --ifm-color-primary-darker: #82c218;
+  --ifm-color-primary-darkest: #659b0e;
+  --ifm-color-primary-light: #c6ff64;
+  --ifm-color-primary-lighter: #d6ff8c;
+  --ifm-color-primary-lightest: #e7ffb8;
+  --ifm-background-color: #090b0a;
+  --ifm-background-surface-color: #111512;
+  --ifm-color-content: #c3cec5;
+  --ifm-color-content-secondary: #7e897f;
+  --ifm-heading-color: #f0f5ef;
+  --ifm-navbar-background-color: #090b0a;
+  --ifm-footer-background-color: #060807;
+  --ifm-toc-border-color: #29332b;
+  --ifm-code-background: #0d120e;
+  --ifm-color-emphasis-100: #121812;
+  --ifm-color-emphasis-200: #182119;
+  --ifm-color-emphasis-300: #29332b;
+  --ifm-color-emphasis-400: #3c4a3e;
+  --ifm-color-emphasis-500: #536255;
+  --ifm-color-emphasis-600: #718074;
+  --ifm-color-emphasis-700: #96a398;
+  --ifm-color-emphasis-800: #b8c4ba;
+  --ifm-color-emphasis-900: #d5dfd6;
+  --ifm-color-emphasis-1000: #f0f7f1;
+  --hatchling-accent-gradient: linear-gradient(110deg, #b8ff3d 0%, #f4ff57 100%);
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Maple Mono NF CN', ui-monospace, monospace;
   --ifm-font-family-monospace: 'Maple Mono NF CN', ui-monospace, monospace;
@@ -51,27 +52,47 @@ pre {
 }
 
 .navbar {
-  border-bottom: 1px solid #515151;
+  border-bottom: 1px solid #29332b;
   box-shadow: none;
 }
 
 .theme-doc-sidebar-container {
-  border-right-color: #515151;
+  border-right-color: #29332b;
 }
 
 .menu__link--active {
-  background: #3c3f41;
-  border-left: 2px solid #589df6;
-  color: #f0f0f0;
+  background: #182119;
+  border-left: 2px solid #b8ff3d;
+  color: #e7ffb8;
 }
 
 .footer {
-  border-top: 1px solid #515151;
+  border-top: 1px solid #29332b;
 }
 
 .theme-code-block,
 code {
-  background: #313335;
+  background: #0d120e;
+}
+
+.navbar__title,
+.hero__title {
+  background: var(--hatchling-accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.button--primary {
+  background: var(--hatchling-accent-gradient);
+  border: 0;
+  color: #10150d;
+  font-weight: 700;
+}
+
+.button--primary:hover {
+  color: #10150d;
+  filter: brightness(1.08);
 }
 
 .token.comment,
@@ -84,22 +105,22 @@ code {
 .token.keyword,
 .token.boolean,
 .token.atrule {
-  color: #cc7832;
+  color: #f4ff57;
 }
 
 .token.string,
 .token.char,
 .token.attr-value {
-  color: #6a8759;
+  color: #b8ff3d;
 }
 
 .token.function,
 .token.class-name {
-  color: #ffc66d;
+  color: #e5ff86;
 }
 
 .token.number,
 .token.constant,
 .token.symbol {
-  color: #6897bb;
+  color: #a7f3a0;
 }
