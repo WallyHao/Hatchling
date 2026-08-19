@@ -59,7 +59,7 @@ export default function DocItemLayout({children}: Props): ReactNode {
         </div>
       </div>
       {isDesktop && (
-        <div className="col col--3">
+        <div className="col hatchling-right-col">
           {docTOC.desktop}
           <DocItemRightSidebar />
         </div>

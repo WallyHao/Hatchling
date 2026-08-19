@@ -40,7 +40,14 @@
   --ifm-font-family-monospace: 'Maple Mono NF CN', ui-monospace, monospace;
   --search-local-highlight-color: #1c3825;
   --search-local-hit-active-color: #e7ffb8;
+  --hatchling-sidebar-width: 290px;
+  --doc-sidebar-width: var(--hatchling-sidebar-width);
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
+}
+
+.hatchling-right-col {
+  flex: 0 0 var(--hatchling-sidebar-width) !important;
+  max-width: var(--hatchling-sidebar-width) !important;
 }
 
 body {
