@@ -97,6 +97,7 @@ input[type='search']:focus {
   flex-direction: column;
   gap: 0.75rem;
   padding-left: 0.5rem;
+  transform: translateX(1rem);
 }
 
 .hatchling-card {
