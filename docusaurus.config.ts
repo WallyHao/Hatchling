@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Hatchling',
   tagline: '战队新同学的成长小屋',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/team-logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -76,8 +76,8 @@ const config: Config = {
     navbar: {
       title: 'Hatchling',
       logo: {
-        alt: 'Hatchling Logo',
-        src: 'img/logo.svg',
+        alt: '战队队徽',
+        src: 'img/team-logo.png',
       },
       items: [
         {
