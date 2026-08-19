@@ -141,6 +141,36 @@ input[type='search']:focus {
   text-decoration: none;
 }
 
+.hatchling-author__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin-bottom: 0.25rem;
+}
+
+.hatchling-author__bio {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.hatchling-author__links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.hatchling-author__link {
+  font-size: 0.8rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.hatchling-author__link:hover {
+  color: var(--ifm-color-primary-lighter);
+  text-decoration: none;
+}
+
 @media (max-width: 996px) {
   .hatchling-right-sidebar {
     display: none;

@@ -4,6 +4,10 @@ import {useDoc} from '@docusaurus/plugin-content-docs/client';
 
 type CreatedFrontMatter = {
   created?: string | Date;
+  author_name?: string;
+  author_bio?: string;
+  author_github?: string;
+  author_url?: string;
 };
 
 function formatDate(value: string | Date): string {
@@ -14,12 +18,50 @@ function formatDate(value: string | Date): string {
 export default function DocItemRightSidebar(): ReactNode {
   const {frontMatter, metadata} = useDoc();
   const {siteConfig} = useDocusaurusContext();
-  const created = (frontMatter as CreatedFrontMatter).created;
+  const {
+    created,
+    author_name: authorName,
+    author_bio: authorBio,
+    author_github: authorGithub,
+    author_url: authorUrl,
+  } = frontMatter as CreatedFrontMatter;
   const lastUpdatedAt = metadata.lastUpdatedAt;
   const repoUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
 
   return (
     <div className="hatchling-right-sidebar">
+      {authorName && (
+        <div className="hatchling-card">
+          <div className="hatchling-card__title">作者</div>
+          <div className="hatchling-author">
+            <div className="hatchling-author__name">{authorName}</div>
+            {authorBio && <div className="hatchling-author__bio">{authorBio}</div>}
+            {(authorGithub || authorUrl) && (
+              <div className="hatchling-author__links">
+                {authorGithub && (
+                  <a
+                    className="hatchling-author__link"
+                    href={authorGithub}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                )}
+                {authorUrl && (
+                  <a
+                    className="hatchling-author__link"
+                    href={authorUrl}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    个人主页
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       <div className="hatchling-card">
         <div className="hatchling-card__title">文档信息</div>
         {created && (
