@@ -35,6 +35,18 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexBlog: false,
+        indexPages: false,
+        language: ['en', 'zh'],
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
