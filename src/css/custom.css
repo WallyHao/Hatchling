@@ -61,6 +61,12 @@ pre {
   margin-right: 0.75rem;
 }
 
+.doc-created-at {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.85rem;
+  margin: -0.75rem 0 1.5rem;
+}
+
 .theme-doc-sidebar-container {
   border-right-color: #29332b;
 }
