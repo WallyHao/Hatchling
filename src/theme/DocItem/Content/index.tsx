@@ -7,26 +7,28 @@ import type {Props} from '@theme/DocItem/Content';
 
 type CreatedFrontMatter = {
   created?: string | Date;
+  author?: string;
 };
 
 function formatCreatedDate(value: string | Date): string {
   if (value instanceof Date) {
-    return `create: ${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`;
+    return `${value.getFullYear()}-${value.getMonth() + 1}-${value.getDate()}`;
   }
   const [year, month, day] = value.split('-');
-  return `create: ${year}-${Number(month)}-${Number(day)}`;
+  return `${year}-${Number(month)}-${Number(day)}`;
 }
 
 export default function DocItemContent({children}: Props) {
   const {frontMatter, contentTitle} = useDoc();
   const syntheticTitle = !frontMatter.hide_title && typeof contentTitle === 'undefined';
-  const created = (frontMatter as CreatedFrontMatter).created;
+  const {created, author} = frontMatter as CreatedFrontMatter;
 
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
         <header>
           <Heading as="h1">{frontMatter.title}</Heading>
+          {author && <div className="doc-meta">{author}</div>}
           {created && <div className="doc-created-at">{formatCreatedDate(created)}</div>}
         </header>
       )}
